@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Your Ultimate Electronics Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="main-header">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="contact-info">
+                    <a href="tel:+23280445623"><i class="fas fa-phone"></i> +232 80 445623</a>
+                    <a href="mailto:info@techstore.com"><i class="fas fa-envelope"></i> techstore@gmail.com</a>
+                </div>
+                <div class="user-actions">
+                    <a href="#" id="loginBtn"><i class="fas fa-user"></i> Login</a>
+                    <a href="#" id="registerBtn">Register</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <div class="header-main">
+            <div class="container">
+                <div class="logo">
+                    <h1>TechStore</h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search products...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="header-cart">
+                    <button class="cart-btn" onclick="toggleCart()">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cart-count">0</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="main-nav">
+            <div class="container">
+                <ul class="nav-links">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#deals">Deals</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to TechStore</h1>
+            <p>Discover Amazing Tech Deals</p>
+            <a href="#products" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories" id="categories">
+        <div class="container">
+            <h2 class="section-title">Featured Categories</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="file:///C:/Users/ALVIN/Downloads/download%20(31).jpeg" alt="Laptops">
+                    <h3>Laptops</h3>
+                </div>
+                <div class="category-card">
+                    <img src="file:///C:/Users/ALVIN/Downloads/download%20(32).jpeg" alt="Smartphones">
+                    <h3>Smartphones</h3>
+                </div>
+                <div class="category-card">
+                    <img src="file:///C:/Users/ALVIN/Downloads/download%20(33).jpeg" alt="Accessories">
+                    <h3>Accessories</h3>
+                </div>
+                <div class="category-card">
+                    <img src="file:///C:/Users/ALVIN/Downloads/download%20(34).jpeg" alt="Gaming">
+                    <h3>Gaming</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="product-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="laptops">Laptops</button>
+                <button class="filter-btn" data-category="phones">Phones</button>
+                <button class="filter-btn" data-category="accessories">Accessories</button>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Add this section after your products section -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-header">
+            <h2 class="section-title">About TechStore</h2>
+            <p class="about-subtitle">Your Trusted Technology Partner Since 2020</p>
+        </div>
+
+        <div class="about-content">
+            <!-- Company Overview -->
+            <div class="about-card">
+                <div class="about-icon">
+                    <i class="fas fa-store"></i>
+                </div>
+                <h3>Our Story</h3>
+                <p>Founded in 2020, TechStore has grown from a small startup to one of the leading technology retailers. We're passionate about bringing the latest tech innovations to our customers.</p>
+            </div>
+
+            <!-- Mission -->
+            <div class="about-card">
+                <div class="about-icon">
+                    <i class="fas fa-bullseye"></i>
+                </div>
+                <h3>Our Mission</h3>
+                <p>To provide high-quality tech products and exceptional customer service, making the latest technology accessible to everyone.</p>
+            </div>
+
+            <!-- Values -->
+            <div class="about-card">
+                <div class="about-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Our Values</h3>
+                <p>Quality, Innovation, Integrity, and Customer Satisfaction drive everything we do at TechStore.</p>
+            </div>
+        </div>
+
+        <!-- Why Choose Us Section -->
+        <div class="why-choose-us">
+            <h3>Why Choose TechStore?</h3>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-truck"></i>
+                    <h4>Fast Delivery</h4>
+                    <p>Free shipping on orders over $50</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Secure Shopping</h4>
+                    <p>100% secure payment</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-undo"></i>
+                    <h4>Easy Returns</h4>
+                    <p>30-day return policy</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-headset"></i>
+                    <h4>24/7 Support</h4>
+                    <p>Dedicated customer service</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Section -->
+        <div class="team-section">
+            <h3>Meet Our Team</h3>
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="file:///C:/Users/ALVIN/Pictures/WhatsApp%20Image%202025-02-01%20at%2010.04.39_d5e7026d.jpg" alt="John Doe">
+                    <h4>SALIFU</h4>
+                    <p>CEO & Founder</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="file:///C:/Users/ALVIN/Pictures/WhatsApp%20Image%202025-02-01%20at%2013.04.01_28b54fbc.jpg" alt="Jane Smith">
+                    <h4>ALVIN</h4>
+                    <p>Tech Lead</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <img src="file:///C:/Users/ALVIN/Pictures/WhatsApp%20Image%202025-02-01%20at%2011.48.08_4e9d9d14.jpg" alt="Mike Johnson">
+                    <h4>PRECIOUS DAVID VINCENT</h4>
+                    <p>Customer Service Head</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="stats-section">
+            <div class="stat">
+                <i class="fas fa-users"></i>
+                <h4>10K+</h4>
+                <p>Happy Customers</p>
+            </div>
+            <div class="stat">
+                <i class="fas fa-shopping-bag"></i>
+                <h4>15K+</h4>
+                <p>Products Sold</p>
+            </div>
+            <div class="stat">
+                <i class="fas fa-star"></i>
+                <h4>4.8</h4>
+                <p>Average Rating</p>
+            </div>
+            <div class="stat">
+                <i class="fas fa-globe"></i>
+                <h4>50+</h4>
+                <p>Countries Served</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="contact-header">
+            <h2 class="section-title">Contact Us</h2>
+            <p class="contact-subtitle">Get in Touch with Our Team</p>
+        </div>
+
+        <div class="contact-wrapper">
+            <!-- Contact Information -->
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <h3>Our Location</h3>
+                        <p>123 Tech Street, MORGAN LANE</p>
+                        <p>freetown</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <h3>Phone Number</h3>
+                        <p>+232 78 556789</p>
+                        <p>+232 80 234457</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h3>Email Address</h3>
+                        <p>supporttechstore@gmail.com</p>
+                        <p>salestechstore@gmail.com</p>
+                    </div>
+                </div>
+
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h3>Working Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 8:00 PM</p>
+                        <p>Saturday: 10:00 AM - 6:00 PM</p>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Add this inside your cart-overlay div -->
+<div class="payment-methods">
+    <h3>Payment Methods</h3>
+    <div class="payment-options">
+        <div class="payment-option">
+            <input type="radio" id="credit-card" name="payment" value="credit-card" checked>
+            <label for="credit-card">
+                <i class="fas fa-credit-card"></i> Credit Card
+            </label>
+        </div>
+        <div class="payment-option">
+            <input type="radio" id="paypal" name="payment" value="paypal">
+            <label for="paypal">
+                <i class="fab fa-paypal"></i> PayPal
+            </label>
+        </div>
+        <div class="payment-option">
+            <input type="radio" id="apple-pay" name="payment" value="apple-pay">
+            <label for="apple-pay">
+                <i class="fab fa-apple-pay"></i> Apple Pay
+            </label>
+        </div>
+    </div>
+
+    <!-- Credit Card Form -->
+    <div class="payment-form" id="credit-card-form">
+        <div class="form-group">
+            <label>Card Number</label>
+            <input type="text" placeholder="1234 5678 9012 3456" maxlength="19">
+        </div>
+        <div class="form-row">
+            <div class="form-group">
+                <label>Expiry Date</label>
+                <input type="text" placeholder="MM/YY" maxlength="5">
+            </div>
+            <div class="form-group">
+                <label>CVV</label>
+                <input type="text" placeholder="123" maxlength="3">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Name on Card</label>
+            <input type="text" placeholder="John Doe">
+        </div>
+    </div>
+</div>
+            <!-- Contact Form -->
+            <div class="contact-form">
+                <form id="contactForm" onsubmit="submitContactForm(event)">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Google Map -->
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=YOUR_GOOGLE_MAPS_EMBED_CODE"
+                width="100%" 
+                height="450" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+    <!-- Cart Overlay -->
+    <div class="cart-overlay" id="cartOverlay">
+        <div class="cart-content">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-cart" onclick="toggleCart()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="cart-items" id="cartItems">
+                <!-- Cart items will be added here -->
+            </div>
+            <div class="cart-footer">
+                <div class="cart-total">
+                    <span>Total:</span>
+                    <span id="cartTotal">$0.00</span>
+                </div>
+                <button class="checkout-btn" onclick="checkout()">
+                    Proceed to Checkout
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Your trusted destination for the latest tech products and accessories.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#deals">Deals</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>
+                        <i class="fas fa-map-marker-alt"></i> 123 Tech Street<br>
+                        <i class="fas fa-phone"></i> +232 80 765432<br>
+                        <i class="fas fa-envelope"></i> info@techstore.com
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2024 TechStore. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
